@@ -1,0 +1,28 @@
+{
+  "projectName": "use-custom-compare",
+  "projectOwner": "kotarella1110",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "kotarella1110",
+      "name": "Kotaro Sugawara",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/12913947?v=4",
+      "profile": "https://qiita.com/kotarella1110",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "infra",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
