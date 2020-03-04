@@ -43,12 +43,16 @@ import { useCustomCompareEffect } from 'use-custom-compare';
 import isEqual from 'lodash/isEqual';
 
 function App({ options }) {
-  useCustomCompareEffect(() => {
-    // do something significant here
-    return () => {
-      // return to clean up that significant thing
-    };
-  }, [options], (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps));
+  useCustomCompareEffect(
+    () => {
+      // do something significant here
+      return () => {
+        // return to clean up that significant thing
+      };
+    },
+    [options],
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps),
+  );
 
   return <div>{/* render significant thing */}</div>;
 }
@@ -62,9 +66,13 @@ import { useCustomCompareCallback } from 'use-custom-compare';
 import isEqual from 'lodash/isEqual';
 
 function App({ options }) {
-  const memoized = useCustomCompareCallback(() => {
-    // do something significant here
-  }, [options], (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps));
+  const memoized = useCustomCompareCallback(
+    () => {
+      // do something significant here
+    },
+    [options],
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps),
+  );
 
   return <div>{/* render significant thing */}</div>;
 }
@@ -78,9 +86,13 @@ import { useCustomCompareMemo } from 'use-custom-compare';
 import isEqual from 'lodash/isEqual';
 
 function App({ options }) {
-  const memoized = useCustomCompareMemo(() => {
-    // do something significant here
-  }, [options], (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps));
+  const memoized = useCustomCompareMemo(
+    () => {
+      // do something significant here
+    },
+    [options],
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps),
+  );
 
   return <div>{/* render significant thing */}</div>;
 }
