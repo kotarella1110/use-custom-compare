@@ -1,6 +1,6 @@
 <h1 align="center">use-custom-compare</h1>
 
-<h3 align="center">It's React's useEffect/useMemo/useCallback hooks, except using custom comparison on the inputs, not reference equality</p>
+<p align="center">It's React's useEffect/useMemo/useCallback hooks, except using custom comparison on the inputs, not reference equality</p>
 
 <p align="center">
   <a href="LICENSE">
@@ -23,9 +23,78 @@
   </a>
 </p>
 
+## Installation
+
+```
+npm install react-use-custom-compare
+
+# or
+
+yarn add react-use-custom-compare
+```
+
+## Usage
+
+### useCustomCompareEffect
+
+```js
+import React from 'react';
+import { useCustomCompareEffect } from 'use-custom-compare';
+import isEqual from 'lodash/isEqual';
+
+function App({ options }) {
+  useCustomCompareEffect(() => {
+    // do something significant here
+    return () => {
+      // return to clean up that significant thing
+    };
+  }, [options], (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps));
+
+  return <div>{/* render significant thing */}</div>;
+}
+```
+
+### useCustomCompareCallback
+
+```js
+import React from 'react';
+import { useCustomCompareCallback } from 'use-custom-compare';
+import isEqual from 'lodash/isEqual';
+
+function App({ options }) {
+  const memoized = useCustomCompareCallback(() => {
+    // do something significant here
+  }, [options], (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps));
+
+  return <div>{/* render significant thing */}</div>;
+}
+```
+
+### useCustomCompareMemo
+
+```js
+import React from 'react';
+import { useCustomCompareMemo } from 'use-custom-compare';
+import isEqual from 'lodash/isEqual';
+
+function App({ options }) {
+  const memoized = useCustomCompareMemo(() => {
+    // do something significant here
+  }, [options], (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps));
+
+  return <div>{/* render significant thing */}</div>;
+}
+```
+
 ## Contributing
 
 Contributions are always welcome! Please read the [contributing](./CONTRIBUTING.md) first.
+
+## Inspiration
+
+- [`use-deep-compare-effect`](https://github.com/kentcdodds/use-deep-compare-effect) 🐋 It's react's useEffect hook, except using deep comparison on the inputs, not reference equality.
+- [`use-deep-compare`](https://github.com/sandiiarov/use-deep-compare) It's react's useEffect/useMemo/useCallback hooks, except using deep comparison on the inputs.
+- [`use-custom-compare-effect`](https://github.com/sanjagh/use-custom-compare-effect) useEffect hook which takes a comparison function instead of compare using reference equality.
 
 ## Contributors
 
