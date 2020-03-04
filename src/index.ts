@@ -1,2 +1,2 @@
-// eslint-disable-next-line import/prefer-default-export
-export { default as useEffectOnce } from './useEffectOnce';
+export { default as useCustomCompareEffect } from './useCustomCompareEffect';
+export * from './types';
