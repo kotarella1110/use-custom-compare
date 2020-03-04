@@ -1,6 +1,6 @@
 {
   "name": "use-custom-compare",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "It's React's useEffect/useMemo/useCallback hooks, except using custom comparison on the inputs, not reference equality",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
