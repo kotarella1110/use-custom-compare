@@ -5,43 +5,43 @@ import { useCustomCompareEffect } from '../src';
 jest.spyOn(console, 'warn').mockImplementation(() => {});
 
 describe('useCustomCompareEffect', () => {
-  it('should output a warning message to console with an empty array deps', () => {
-    renderHook(() =>
+  it('should throw an error with an empty array deps', () => {
+    const { result } = renderHook(() =>
       useCustomCompareEffect(
         () => {},
         [],
         () => true,
       ),
     );
-    expect(console.warn).toHaveBeenCalledWith(
+    expect(result.error.message).toBe(
       'useCustomCompareEffect should not be used with no dependencies. Use React.useEffect instead.',
     );
   });
 
-  it('should output a warning message to console with an array deps of only primitive values', () => {
-    renderHook(() =>
+  it('should throw an error with an array deps of only primitive values', () => {
+    const { result } = renderHook(() =>
       useCustomCompareEffect(
         () => {},
         [true, 1, 'string'],
         () => true,
       ),
     );
-    expect(console.warn).toHaveBeenCalledWith(
+    expect(result.error.message).toBe(
       'useCustomCompareEffect should not be used with dependencies that are all primitive values. Use React.useEffect instead.',
     );
   });
 
-  it('should output a warning message to console with a depsAreEqual of primitive value', () => {
-    renderHook(() =>
+  it('should throw an error with a depsAreEqual of primitive value', () => {
+    const { result } = renderHook(() =>
       // @ts-ignore
       useCustomCompareEffect(() => {}, [1, { a: 'b' }, true], 1),
     );
-    expect(console.warn).toHaveBeenCalledWith(
+    expect(result.error.message).toBe(
       'useCustomCompareEffect should be used with depsEqual callback for comparing deps list',
     );
   });
 
-  it('should not output a warning message to console in production mode', () => {
+  it('should not throw an error in production mode', () => {
     const env = process.env.NODE_ENV;
     process.env.NODE_ENV = 'production';
 
@@ -59,11 +59,6 @@ describe('useCustomCompareEffect', () => {
         () => true,
       ),
     );
-    renderHook(() =>
-      // @ts-ignore
-      useCustomCompareEffect(() => {}, [1, { a: 'b' }, true], 1),
-    );
-    expect(console.warn).not.toBeCalled();
 
     process.env.NODE_ENV = env;
   });
