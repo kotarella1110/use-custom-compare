@@ -29,14 +29,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kotarella1110/npm-example.git"
+    "url": "https://github.com/kotarella1110/use-custom-compare.git"
   },
   "author": "Kotaro Sugawara <kotarella1110@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kotarella1110/npm-example/issues"
+    "url": "https://github.com/kotarella1110/use-custom-compare/issues"
   },
-  "homepage": "https://github.com/kotarella1110/npm-example#readme",
+  "homepage": "https://github.com/kotarella1110/use-custom-compare#readme",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
