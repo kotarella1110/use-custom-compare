@@ -9,6 +9,15 @@
   <a href="https://github.com/kotarella1110/use-custom-compare/actions?query=workflow%3ACI">
     <img alt="Actions Status" src="https://github.com/kotarella1110/use-custom-compare/workflows/CI/badge.svg">
   </a>
+  <a href="https://www.npmjs.com/package/use-custom-compare">
+    <img alt="Downloads Month" src="https://img.shields.io/npm/dm/use-custom-compare?style=flat-square">
+  </a>
+  <a href="https://www.npmjs.com/package/use-custom-compare">
+    <img alt="Downloads Total" src="https://img.shields.io/npm/dt/use-custom-compare?style=flat-square">
+  </a>
+  <a href="https://david-dm.org/kotarella1110/use-custom-compare">
+    <img alt="Dependencies Status" src="https://david-dm.org/kotarella1110/use-custom-compare.svg?style=flat-square">
+  </a>
   <a href="https://github.com/semantic-release/semantic-release">
     <img alt="Semantic Release" src="https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square">
   </a>
