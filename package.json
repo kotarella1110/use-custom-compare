@@ -2,17 +2,17 @@
   "name": "use-custom-compare",
   "version": "1.0.0",
   "description": "It's React's useEffect/useMemo/useCallback hooks, except using custom comparison on the inputs, not reference equality",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
+  "main": "dist/use-custom-compare.js",
+  "module": "dist/use-custom-compare.esm.js",
+  "unpkg": "dist/use-custom-compare.umd.min.js",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
-    "lib"
+    "dist"
   ],
-  "types": "lib/index.d.ts",
-  "typings": "lib/index.d.ts",
   "scripts": {
     "build": "npm run clean && rollup -c",
-    "clean": "rimraf lib",
+    "clean": "rimraf dist",
     "lint": "eslint '**/*.{js,ts}'",
     "lint:fix": "npm run lint -- --fix",
     "lint:types": "tsc --noEmit",
@@ -68,6 +68,7 @@
     "rollup": "^1.32.1",
     "rollup-plugin-filesize": "^6.2.1",
     "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-sourcemaps": "^0.5.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.26.0",
     "semantic-release": "^17.0.4",
