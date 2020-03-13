@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.0...v1.0.1) (2020-03-13)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump acorn from 6.4.0 to 6.4.1 ([204a694](https://github.com/kotarella1110/use-custom-compare/commit/204a69469859d16e7c207597041bc06cae89fb21))
+
 # 1.0.0 (2020-03-04)
 
 
