@@ -87,6 +87,10 @@
   "lint-staged": {
     "*.{js,ts}": [
       "npm run lint:fix"
+    ],
+    "*.{md,json}": [
+      "prettier --write",
+      "git add"
     ]
   },
   "config": {

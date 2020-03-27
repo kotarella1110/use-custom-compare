@@ -47,9 +47,9 @@ yarn add react-use-custom-compare
 ### useCustomCompareEffect
 
 ```js
-import React from 'react';
-import { useCustomCompareEffect } from 'use-custom-compare';
-import isEqual from 'lodash/isEqual';
+import React from "react";
+import { useCustomCompareEffect } from "use-custom-compare";
+import isEqual from "lodash/isEqual";
 
 function App({ options }) {
   useCustomCompareEffect(
@@ -60,7 +60,7 @@ function App({ options }) {
       };
     },
     [options],
-    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps),
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps)
   );
 
   return <div>{/* render significant thing */}</div>;
@@ -70,9 +70,9 @@ function App({ options }) {
 ### useCustomCompareCallback
 
 ```js
-import React from 'react';
-import { useCustomCompareCallback } from 'use-custom-compare';
-import isEqual from 'lodash/isEqual';
+import React from "react";
+import { useCustomCompareCallback } from "use-custom-compare";
+import isEqual from "lodash/isEqual";
 
 function App({ options }) {
   const memoized = useCustomCompareCallback(
@@ -80,7 +80,7 @@ function App({ options }) {
       // do something significant here
     },
     [options],
-    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps),
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps)
   );
 
   return <div>{/* render significant thing */}</div>;
@@ -90,9 +90,9 @@ function App({ options }) {
 ### useCustomCompareMemo
 
 ```js
-import React from 'react';
-import { useCustomCompareMemo } from 'use-custom-compare';
-import isEqual from 'lodash/isEqual';
+import React from "react";
+import { useCustomCompareMemo } from "use-custom-compare";
+import isEqual from "lodash/isEqual";
 
 function App({ options }) {
   const memoized = useCustomCompareMemo(
@@ -100,7 +100,7 @@ function App({ options }) {
       // do something significant here
     },
     [options],
-    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps),
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps)
   );
 
   return <div>{/* render significant thing */}</div>;
@@ -132,6 +132,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
