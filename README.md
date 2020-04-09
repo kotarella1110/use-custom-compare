@@ -24,7 +24,7 @@
   <a href="http://commitizen.github.io/cz-cli/">
     <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square">
   </a>
-  <a href="#contributors-">
+  <a href="#contributors">
     <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square">
   </a>
   <a href="CONTRIBUTING.md">
@@ -35,11 +35,11 @@
 ## Installation
 
 ```
-npm install react-use-custom-compare
+npm install use-custom-compare
 
 # or
 
-yarn add react-use-custom-compare
+yarn add use-custom-compare
 ```
 
 ## Usage
