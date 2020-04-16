@@ -1,36 +1,26 @@
-<h1 align="center">use-custom-compare</h1>
+<div align="center">
 
-<p align="center">It's React's useEffect/useMemo/useCallback hooks, except using custom comparison on the inputs, not reference equality</p>
+<h1>use-custom-compare</h1>
 
-<p align="center">
-  <a href="LICENSE">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square">
-  </a>
-  <a href="https://github.com/kotarella1110/use-custom-compare/actions?query=workflow%3ACI">
-    <img alt="Actions Status" src="https://github.com/kotarella1110/use-custom-compare/workflows/CI/badge.svg">
-  </a>
-  <a href="https://www.npmjs.com/package/use-custom-compare">
-    <img alt="Downloads Month" src="https://img.shields.io/npm/dm/use-custom-compare?style=flat-square">
-  </a>
-  <a href="https://www.npmjs.com/package/use-custom-compare">
-    <img alt="Downloads Total" src="https://img.shields.io/npm/dt/use-custom-compare?style=flat-square">
-  </a>
-  <a href="https://david-dm.org/kotarella1110/use-custom-compare">
-    <img alt="Dependencies Status" src="https://david-dm.org/kotarella1110/use-custom-compare.svg?style=flat-square">
-  </a>
-  <a href="https://github.com/semantic-release/semantic-release">
-    <img alt="Semantic Release" src="https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square">
-  </a>
-  <a href="http://commitizen.github.io/cz-cli/">
-    <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square">
-  </a>
-  <a href="#contributors">
-    <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square">
-  </a>
-  <a href="CONTRIBUTING.md">
-    <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-green.svg?style=flat-square">
-  </a>
-</p>
+It's React's useEffect/useMemo/useCallback hooks, except using custom comparison on the inputs, not reference equality
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![Actions Status](https://github.com/kotarella1110/use-custom-compare/workflows/CI/badge.svg)](https://github.com/kotarella1110/use-custom-compare/actions?query=workflow%3ACI)
+[![NPM Version](https://img.shields.io/npm/v/use-custom-compare?style=flat-square)](https://www.npmjs.com/package/use-custom-compare)
+[![Downloads Month](https://img.shields.io/npm/dm/use-custom-compare?style=flat-square)](https://www.npmjs.com/package/use-custom-compare)
+[![Downloads Total](https://img.shields.io/npm/dt/use-custom-compare?style=flat-square)](https://www.npmjs.com/package/use-custom-compare)
+[![Dependencies Status](https://david-dm.org/kotarella1110/use-custom-compare.svg?style=flat-square)](https://david-dm.org/kotarella1110/use-custom-compare)
+[![Semantic Release](https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg?style=flat-square)](CONTRIBUTING.md)
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+</div>
 
 ## Installation
 
