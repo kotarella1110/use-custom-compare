@@ -71,7 +71,7 @@
     "rollup-plugin-sourcemaps": "^0.6.2",
     "rollup-plugin-terser": "^6.0.1",
     "rollup-plugin-typescript2": "^0.27.1",
-    "semantic-release": "^17.0.7",
+    "semantic-release": "^17.0.8",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.3"
   },
