@@ -35,7 +35,7 @@ export function useCustomCompareMemoize(
 ) {
   const ref = useRef<DependencyList>([]);
 
-  if (!ref.current || !depsAreEqual(deps, ref.current)) {
+  if (!ref.current || !depsAreEqual(ref.current, deps)) {
     ref.current = deps;
   }
 
