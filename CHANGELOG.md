@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.1...v1.0.2) (2020-06-29)
+
+
+### Bug Fixes
+
+* **memoize:** fix depsAreEqual argument order ([#191](https://github.com/kotarella1110/use-custom-compare/issues/191)) ([ca386c6](https://github.com/kotarella1110/use-custom-compare/commit/ca386c6213e791d33460e45a9b90e581cc2e866d)), closes [#186](https://github.com/kotarella1110/use-custom-compare/issues/186)
+
 ## [1.0.1](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.0...v1.0.1) (2020-03-13)
 
 ### Bug Fixes
