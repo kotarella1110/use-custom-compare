@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.2...v1.0.3) (2020-07-07)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump npm-registry-fetch from 4.0.4 to 4.0.5 ([e32f651](https://github.com/kotarella1110/use-custom-compare/commit/e32f6516edeea9cc9b397ad75f25933330a812b9))
+
 ## [1.0.2](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.1...v1.0.2) (2020-06-29)
 
 
