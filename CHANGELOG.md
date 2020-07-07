@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.3...v1.0.4) (2020-07-07)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump npm from 6.14.5 to 6.14.6 ([2528bbb](https://github.com/kotarella1110/use-custom-compare/commit/2528bbb1e81bd0e1ed225860f720524d3da77460))
+
 ## [1.0.3](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.2...v1.0.3) (2020-07-07)
 
 
