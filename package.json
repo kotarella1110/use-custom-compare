@@ -60,7 +60,7 @@
     "git-cz": "^4.7.0",
     "husky": "^4.2.5",
     "jest": "^25.5.4",
-    "lint-staged": "^10.2.11",
+    "lint-staged": "^10.2.13",
     "prettier": "^2.1.0",
     "react": "^16.13.1",
     "react-test-renderer": "^16.13.1",
