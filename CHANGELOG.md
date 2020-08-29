@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.4...v1.0.5) (2020-08-29)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump lodash from 4.17.15 to 4.17.20 ([399730e](https://github.com/kotarella1110/use-custom-compare/commit/399730ed6390f11b0dbf66f0e0c2df7616edf3b8))
+
 ## [1.0.4](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.3...v1.0.4) (2020-07-07)
 
 
