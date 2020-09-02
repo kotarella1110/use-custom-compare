@@ -44,7 +44,7 @@
     "@semantic-release/git": "^9.0.0",
     "@testing-library/react-hooks": "^3.4.1",
     "@types/jest": "^26.0.12",
-    "@types/react": "^16.9.48",
+    "@types/react": "^16.9.49",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
