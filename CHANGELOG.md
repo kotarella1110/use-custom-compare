@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.5...v1.0.6) (2020-09-11)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump node-fetch from 2.6.0 to 2.6.1 ([ae4afe5](https://github.com/kotarella1110/use-custom-compare/commit/ae4afe52d2a6794f7445ff4c26dd10a1f1977755))
+
 ## [1.0.5](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.4...v1.0.5) (2020-08-29)
 
 
