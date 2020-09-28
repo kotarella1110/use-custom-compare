@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import dequal from 'dequal';
+import { dequal } from 'dequal';
 import { useCustomCompareEffect } from '../src';
 
 jest.spyOn(console, 'warn').mockImplementation(() => {});
