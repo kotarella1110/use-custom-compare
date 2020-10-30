@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.7...v1.0.8) (2020-10-30)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump npm-user-validate from 1.0.0 to 1.0.1 ([1a7f917](https://github.com/kotarella1110/use-custom-compare/commit/1a7f91738c8d9800841585f00c0d504b819c3c64))
+
 ## [1.0.7](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.6...v1.0.7) (2020-10-17)
 
 
