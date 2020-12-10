@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.10...v1.0.11) (2020-12-10)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump ini from 1.3.5 to 1.3.7 ([7cf42b7](https://github.com/kotarella1110/use-custom-compare/commit/7cf42b732241f817a51a48a8185085c0c25a6b6d))
+
 ## [1.0.10](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.9...v1.0.10) (2020-11-20)
 
 
