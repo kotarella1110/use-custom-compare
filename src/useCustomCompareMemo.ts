@@ -2,10 +2,10 @@ import { useMemo, DependencyList } from 'react';
 import { checkDeps, useCustomCompareMemoize } from './useCustomCompareMemoize';
 import { DepsAreEqual } from './types';
 
-function useCustomCompareMemo<T>(
+function useCustomCompareMemo<T, TDependencyList extends DependencyList>(
   factory: () => T,
-  deps: DependencyList,
-  depsAreEqual: DepsAreEqual,
+  deps: [...TDependencyList],
+  depsAreEqual: DepsAreEqual<TDependencyList>,
 ): T {
   if (process.env.NODE_ENV !== 'production') {
     checkDeps(deps, depsAreEqual, 'useCustomCompareMemo');

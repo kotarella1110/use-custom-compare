@@ -1,6 +1,6 @@
 import { DependencyList } from 'react';
 
-export type DepsAreEqual = (
-  prevDeps: DependencyList,
-  nextDeps: DependencyList,
+export type DepsAreEqual<TDependencyList extends DependencyList> = (
+  prevDeps: TDependencyList,
+  nextDeps: TDependencyList,
 ) => boolean;
