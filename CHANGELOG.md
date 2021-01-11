@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.13...v1.1.0) (2021-01-11)
+
+
+### Features
+
+* **types:** enhance type safety ([#378](https://github.com/kotarella1110/use-custom-compare/issues/378)) ([6692ff8](https://github.com/kotarella1110/use-custom-compare/commit/6692ff8e24f607c02ac02862b0dda15520e4d89a))
+
 ## [1.0.13](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.12...v1.0.13) (2021-01-11)
 
 
