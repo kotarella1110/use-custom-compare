@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.12...v1.0.13) (2021-01-11)
+
+
+### Bug Fixes
+
+* change from throw error to output console ([#380](https://github.com/kotarella1110/use-custom-compare/issues/380)) ([77cd1e2](https://github.com/kotarella1110/use-custom-compare/commit/77cd1e29fb5bb6f8221e802d22f4b799e13c710e))
+
 ## [1.0.12](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.11...v1.0.12) (2020-12-30)
 
 
