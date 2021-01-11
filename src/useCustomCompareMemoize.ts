@@ -13,17 +13,17 @@ export function checkDeps<TDependencyList extends DependencyList>(
   const reactHookName = `React.${name.replace(/CustomCompare/, '')}`;
 
   if (!(deps instanceof Array) || deps.length === 0) {
-    throw new Error(
+    console.warn(
       `${name} should not be used with no dependencies. Use ${reactHookName} instead.`,
     );
   }
   if (deps.every(isPrimitive)) {
-    throw new Error(
+    console.warn(
       `${name} should not be used with dependencies that are all primitive values. Use ${reactHookName} instead.`,
     );
   }
   if (typeof depsAreEqual !== 'function') {
-    throw new Error(
+    console.warn(
       `${name} should be used with depsEqual callback for comparing deps list`,
     );
   }

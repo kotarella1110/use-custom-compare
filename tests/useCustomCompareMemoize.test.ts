@@ -8,27 +8,24 @@ import {
 jest.spyOn(console, 'warn').mockImplementation(() => {});
 
 describe('checkDeps', () => {
-  it('should throw an error with an empty array deps', () => {
-    expect(() =>
-      checkDeps([], () => true, 'useCustomCompareEffect'),
-    ).toThrowError(
+  it('should output a warning message to console with an empty array deps', () => {
+    checkDeps([], () => true, 'useCustomCompareEffect');
+    expect(console.warn).toHaveBeenCalledWith(
       'useCustomCompareEffect should not be used with no dependencies. Use React.useEffect instead.',
     );
   });
 
-  it('should throw an error with an array deps of only primitive values', () => {
-    expect(() =>
-      checkDeps([true, 1, 'string'], () => true, 'useCustomCompareEffect'),
-    ).toThrowError(
+  it('should output a warning message to console with an array deps of only primitive values', () => {
+    checkDeps([true, 1, 'string'], () => true, 'useCustomCompareEffect');
+    expect(console.warn).toHaveBeenCalledWith(
       'useCustomCompareEffect should not be used with dependencies that are all primitive values. Use React.useEffect instead.',
     );
   });
 
-  it('should throw an error with a depsAreEqual of primitive value', () => {
-    expect(() =>
-      // @ts-ignore
-      checkDeps([1, { a: 'b' }, true], 1, 'useCustomCompareEffect'),
-    ).toThrowError(
+  it('should output a warning message to console with a depsAreEqual of primitive value', () => {
+    // @ts-ignore
+    checkDeps([1, { a: 'b' }, true], 1, 'useCustomCompareEffect');
+    expect(console.warn).toHaveBeenCalledWith(
       'useCustomCompareEffect should be used with depsEqual callback for comparing deps list',
     );
   });

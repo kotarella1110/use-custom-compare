@@ -57,6 +57,26 @@ function App({ options }) {
 }
 ```
 
+### useCustomCompareMemo
+
+```js
+import React from "react";
+import { useCustomCompareMemo } from "use-custom-compare";
+import isEqual from "lodash/isEqual";
+
+function App({ options }) {
+  const memoized = useCustomCompareMemo(
+    () => {
+      // do something significant here
+    },
+    [options],
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps)
+  );
+
+  return <div>{/* render significant thing */}</div>;
+}
+```
+
 ### useCustomCompareCallback
 
 ```js
@@ -77,25 +97,12 @@ function App({ options }) {
 }
 ```
 
-### useCustomCompareMemo
+## Note
 
-```js
-import React from "react";
-import { useCustomCompareMemo } from "use-custom-compare";
-import isEqual from "lodash/isEqual";
+In the following cases, use React's useEffect/useMemo/useCallback hooks instead of this custom compare hooks!
 
-function App({ options }) {
-  const memoized = useCustomCompareMemo(
-    () => {
-      // do something significant here
-    },
-    [options],
-    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps)
-  );
-
-  return <div>{/* render significant thing */}</div>;
-}
-```
+- no dependencies
+- dependencies are all primitive values
 
 ## Contributing
 
