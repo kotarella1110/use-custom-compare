@@ -5,9 +5,9 @@ function isPrimitive(val: any) {
   return val == null || /^[sbn]/.test(typeof val);
 }
 
-export function checkDeps(
-  deps: React.DependencyList,
-  depsAreEqual: DepsAreEqual,
+export function checkDeps<TDependencyList extends DependencyList>(
+  deps: [...TDependencyList],
+  depsAreEqual: DepsAreEqual<TDependencyList>,
   name: string,
 ) {
   const reactHookName = `React.${name.replace(/CustomCompare/, '')}`;
@@ -29,11 +29,11 @@ export function checkDeps(
   }
 }
 
-export function useCustomCompareMemoize(
-  deps: DependencyList,
-  depsAreEqual: DepsAreEqual,
+export function useCustomCompareMemoize<TDependencyList extends DependencyList>(
+  deps: [...TDependencyList],
+  depsAreEqual: DepsAreEqual<TDependencyList>,
 ) {
-  const ref = useRef<DependencyList>([]);
+  const ref = useRef<TDependencyList | undefined>(undefined);
 
   if (!ref.current || !depsAreEqual(ref.current, deps)) {
     ref.current = deps;

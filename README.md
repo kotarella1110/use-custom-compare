@@ -97,6 +97,29 @@ function App({ options }) {
 }
 ```
 
+## TypeScript
+
+This custom compare hooks is type-safe because it is built with TypeScript, which requires the use of TypeScript 4.0 or higher.
+
+```tsx
+import React from "react";
+import { useCustomCompareEffect } from "use-custom-compare";
+import isEqual from "lodash/isEqual";
+
+function App() {
+  useCustomCompareEffect(
+    () => {},
+    [1, { a: "b" }, true],
+    (
+      prevDeps, // type: [number, { a: string }, boolean]
+      nextDeps // type: [number, { a: string }, boolean]
+    ) => isEqual(prevDeps, nextDeps)
+  );
+
+  return <div />;
+}
+```
+
 ## Note
 
 In the following cases, use React's useEffect/useMemo/useCallback hooks instead of this custom compare hooks!
