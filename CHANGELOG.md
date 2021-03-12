@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/kotarella1110/use-custom-compare/compare/v1.1.0...v1.1.1) (2021-03-12)
+
+
+### Bug Fixes
+
+* improve deps type to support readonly array ([#459](https://github.com/kotarella1110/use-custom-compare/issues/459)) ([2957665](https://github.com/kotarella1110/use-custom-compare/commit/29576659b9b9b8a65ac27048042af1e7f1d539c4))
+
 # [1.1.0](https://github.com/kotarella1110/use-custom-compare/compare/v1.0.13...v1.1.0) (2021-01-11)
 
 
