@@ -4,8 +4,8 @@ import { DepsAreEqual } from './types';
 
 function useCustomCompareEffect<TDependencyList extends DependencyList>(
   effect: EffectCallback,
-  deps: [...TDependencyList],
-  depsAreEqual: DepsAreEqual<TDependencyList>,
+  deps: readonly [...TDependencyList],
+  depsAreEqual: DepsAreEqual<readonly [...TDependencyList]>,
 ) {
   if (process.env.NODE_ENV !== 'production') {
     checkDeps(deps, depsAreEqual, 'useCustomCompareEffect');

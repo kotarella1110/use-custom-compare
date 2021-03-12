@@ -111,8 +111,8 @@ function App() {
     () => {},
     [1, { a: "b" }, true],
     (
-      prevDeps, // type: [number, { a: string }, boolean]
-      nextDeps // type: [number, { a: string }, boolean]
+      prevDeps, // type: readonly [number, { a: string }, boolean]
+      nextDeps // type: readonly [number, { a: string }, boolean]
     ) => isEqual(prevDeps, nextDeps)
   );
 

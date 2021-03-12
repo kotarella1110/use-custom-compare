@@ -6,7 +6,7 @@ function isPrimitive(val: any) {
 }
 
 export function checkDeps<TDependencyList extends DependencyList>(
-  deps: [...TDependencyList],
+  deps: readonly [...TDependencyList],
   depsAreEqual: DepsAreEqual<TDependencyList>,
   name: string,
 ) {
@@ -30,10 +30,10 @@ export function checkDeps<TDependencyList extends DependencyList>(
 }
 
 export function useCustomCompareMemoize<TDependencyList extends DependencyList>(
-  deps: [...TDependencyList],
-  depsAreEqual: DepsAreEqual<TDependencyList>,
+  deps: readonly [...TDependencyList],
+  depsAreEqual: DepsAreEqual<readonly [...TDependencyList]>,
 ) {
-  const ref = useRef<TDependencyList | undefined>(undefined);
+  const ref = useRef<readonly [...TDependencyList] | undefined>(undefined);
 
   if (!ref.current || !depsAreEqual(ref.current, deps)) {
     ref.current = deps;
