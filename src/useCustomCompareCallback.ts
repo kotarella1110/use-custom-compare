@@ -7,8 +7,8 @@ function useCustomCompareCallback<
   TDependencyList extends DependencyList
 >(
   callback: T,
-  deps: [...TDependencyList],
-  depsEqual: DepsAreEqual<TDependencyList>,
+  deps: readonly [...TDependencyList],
+  depsEqual: DepsAreEqual<readonly [...TDependencyList]>,
 ): T {
   if (process.env.NODE_ENV !== 'production') {
     checkDeps(deps, depsEqual, 'useCustomCompareCallback');

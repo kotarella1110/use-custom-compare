@@ -4,8 +4,8 @@ import { DepsAreEqual } from './types';
 
 function useCustomCompareMemo<T, TDependencyList extends DependencyList>(
   factory: () => T,
-  deps: [...TDependencyList],
-  depsAreEqual: DepsAreEqual<TDependencyList>,
+  deps: readonly [...TDependencyList],
+  depsAreEqual: DepsAreEqual<readonly [...TDependencyList]>,
 ): T {
   if (process.env.NODE_ENV !== 'production') {
     checkDeps(deps, depsAreEqual, 'useCustomCompareMemo');
