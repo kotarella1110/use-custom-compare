@@ -46,7 +46,7 @@
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.5",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "commitizen": "^4.2.3",
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "dequal": "^2.0.2",
     "eslint": "^7.25.0",
