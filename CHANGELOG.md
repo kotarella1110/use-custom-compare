@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/kotarella1110/use-custom-compare/compare/v1.1.1...v1.2.0) (2021-08-30)
+
+
+### Features
+
+* **layoutEffect:** add useCustomCompareLayoutEffect ([#571](https://github.com/kotarella1110/use-custom-compare/issues/571)) ([72afdf8](https://github.com/kotarella1110/use-custom-compare/commit/72afdf8cce9ea1216e08e3e182ee6006e8b8b659))
+
 ## [1.1.1](https://github.com/kotarella1110/use-custom-compare/compare/v1.1.0...v1.1.1) (2021-03-12)
 
 
