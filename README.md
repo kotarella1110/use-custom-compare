@@ -120,6 +120,26 @@ function App() {
 }
 ```
 
+## ESLint
+
+`exhaustive-deps` in [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) can be configured to validate dependencies.
+If you want to apply that rule to this custom compare hooks as well, use the [`additionalHooks` option](https://www.npmjs.com/package/eslint-plugin-react-hooks#advanced-configuration).
+
+```js
+{
+  "rules": {
+    // ...
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        additionalHooks:
+          "(useCustomCompareEffect|useCustomCompareLayoutEffect|useCustomCompareMemo|useCustomCompareCallback)"
+      }
+    ]
+  }
+}
+```
+
 ## Note
 
 In the following cases, use React's useEffect/useMemo/useCallback hooks instead of this custom compare hooks!
