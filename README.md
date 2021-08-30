@@ -57,6 +57,29 @@ function App({ options }) {
 }
 ```
 
+### useCustomCompareLayoutEffect
+
+```js
+import React from "react";
+import { useCustomCompareLayoutEffect } from "use-custom-compare";
+import isEqual from "lodash/isEqual";
+
+function App({ options }) {
+  useCustomCompareLayoutEffect(
+    () => {
+      // do something significant here
+      return () => {
+        // return to clean up that significant thing
+      };
+    },
+    [options],
+    (prevDeps, nextDeps) => isEqual(prevDeps, nextDeps)
+  );
+
+  return <div>{/* render significant thing */}</div>;
+}
+```
+
 ### useCustomCompareMemo
 
 ```js
