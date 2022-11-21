@@ -17,10 +17,13 @@ jobs:
         run: npm ci
       - name: Install React ${{ matrix.react-version }}
         run: |
-          npm install --D --force \
+          npm install --D --legacy-peer-deps \
             react@${{ matrix.react-version }} \
             react-test-renderer@${{ matrix.react-version }} \
-            @testing-library/react@12
+            @testing-library/react@12 \
+            @testing-library/react-hooks
+      - name: Replace @testing-library/react with @testing-library/react-hooks
+        run: npx replace@1.2.2 '@testing-library/react' '@testing-library/react-hooks' tests -r
       - name: Test
         run: npm test
         env:
