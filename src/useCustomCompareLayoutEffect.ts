@@ -2,7 +2,7 @@ import { useLayoutEffect, EffectCallback, DependencyList } from 'react';
 import { checkDeps, useCustomCompareMemoize } from './useCustomCompareMemoize';
 import { DepsAreEqual } from './types';
 
-function useCustomCompareEffect<TDependencyList extends DependencyList>(
+function useCustomCompareLayoutEffect<TDependencyList extends DependencyList>(
   effect: EffectCallback,
   deps: readonly [...TDependencyList],
   depsAreEqual: DepsAreEqual<readonly [...TDependencyList]>,
@@ -14,4 +14,4 @@ function useCustomCompareEffect<TDependencyList extends DependencyList>(
   useLayoutEffect(effect, useCustomCompareMemoize(deps, depsAreEqual));
 }
 
-export default useCustomCompareEffect;
+export default useCustomCompareLayoutEffect;
