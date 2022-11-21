@@ -61,7 +61,7 @@ describe('useCustomCompareCallback', () => {
     );
     renderHook(() =>
       // @ts-ignore
-      useCustomCompareEffect(() => {}, [1, { a: 'b' }, true], 1),
+      useCustomCompareCallback(() => {}, [1, { a: 'b' }, true], 1),
     );
     expect(console.warn).not.toBeCalled();
 
