@@ -15,11 +15,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm ci
-      - name: Install React v${{ matrix.react-version }}
+      - name: Install React ${{ matrix.react-version }}
         run: |
-          npm install --D \
+          npm install --D --force \
             react@${{ matrix.react-version }} \
-            react-test-renderer@${{ matrix.react-version }}
+            react-test-renderer@${{ matrix.react-version }} \
             @testing-library/react@12
       - name: Test
         run: npm test
