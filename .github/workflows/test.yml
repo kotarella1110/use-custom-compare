@@ -1,4 +1,4 @@
-name: CI
+name: Test
 on: [pull_request]
 jobs:
   react-16-17:
@@ -17,20 +17,14 @@ jobs:
         run: npm ci
       - name: Install React v${{ matrix.react-version }}
         run: |
-          yarn add --dev \
+          npm install --D \
             react@${{ matrix.react-version }} \
             react-dom@${{ matrix.react-version }} \
             react-test-renderer@${{ matrix.react-version }}
-      - name: Lint
-        run: |
-          npm run lint:types
-          npm run lint
       - name: Test
         run: npm test
         env:
           CI: true
-      - name: Build
-        run: npm run build
   react-18:
     runs-on: ubuntu-latest
     strategy:
@@ -44,13 +38,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm ci
-      - name: Lint
-        run: |
-          npm run lint:types
-          npm run lint
       - name: Test
         run: npm test
         env:
           CI: true
-      - name: Build
-        run: npm run build
