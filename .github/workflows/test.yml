@@ -1,0 +1,47 @@
+name: Test
+on: [pull_request]
+jobs:
+  react-16-17:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+        react-version: [^16.8.0, ^17]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Install React ${{ matrix.react-version }}
+        run: |
+          npm install --D --legacy-peer-deps \
+            react@${{ matrix.react-version }} \
+            react-test-renderer@${{ matrix.react-version }} \
+            @testing-library/react@12 \
+            @testing-library/react-hooks
+      - name: Replace @testing-library/react with @testing-library/react-hooks
+        run: npx replace@1.2.2 '@testing-library/react' '@testing-library/react-hooks' tests -r
+      - name: Test
+        run: npm test
+        env:
+          CI: true
+  react-18:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Test
+        run: npm test
+        env:
+          CI: true
