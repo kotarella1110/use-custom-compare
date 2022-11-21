@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/kotarella1110/use-custom-compare/compare/v1.2.0...v1.3.0) (2022-11-21)
+
+
+### Features
+
+* support React 18 ([#677](https://github.com/kotarella1110/use-custom-compare/issues/677)) ([74eb7f9](https://github.com/kotarella1110/use-custom-compare/commit/74eb7f9ce0518cf1c18d09f218dc34e34973fdac))
+
 # [1.2.0](https://github.com/kotarella1110/use-custom-compare/compare/v1.1.1...v1.2.0) (2021-08-30)
 
 
