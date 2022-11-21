@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react';
 import { dequal } from 'dequal';
 import { useCustomCompareCallback } from '../src';
 
