@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/kotarella1110/use-custom-compare/compare/v1.3.0...v1.4.0) (2023-06-06)
+
+
+### Features
+
+* **memoize:** improve comparison of previous dependencies when comparing with current dependencies ([#745](https://github.com/kotarella1110/use-custom-compare/issues/745)) ([d98903a](https://github.com/kotarella1110/use-custom-compare/commit/d98903a54315366573588ffee883c142edbd7d1e))
+
 # [1.3.0](https://github.com/kotarella1110/use-custom-compare/compare/v1.2.0...v1.3.0) (2022-11-21)
 
 
