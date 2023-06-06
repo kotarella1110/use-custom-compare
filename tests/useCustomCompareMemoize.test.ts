@@ -69,4 +69,43 @@ describe('useCustomCompareMemoize', () => {
     rerender();
     expect(result.current).toEqual([1, { a: 'c' }, false]);
   });
+
+  // https://github.com/kotarella1110/use-custom-compare/issues/713
+  it('should compare previous deps correctly when comparing with current deps', () => {
+    const referenceComparison = jest.fn();
+    const valueComparison = jest.fn();
+    let deps = [{}];
+
+    const { rerender } = renderHook(() =>
+      useCustomCompareMemoize(deps, (prevDeps, nextDeps) => {
+        if (prevDeps[0] === nextDeps[0]) {
+          referenceComparison();
+          return true;
+        }
+        valueComparison();
+        return dequal(prevDeps[0], nextDeps[0]);
+      }),
+    );
+
+    expect(referenceComparison).toBeCalledTimes(0);
+    expect(valueComparison).toBeCalledTimes(0);
+
+    rerender();
+    expect(referenceComparison).toBeCalledTimes(1);
+    expect(valueComparison).toBeCalledTimes(0);
+
+    // change (update reference)
+    deps = [{}];
+    rerender();
+    expect(referenceComparison).toBeCalledTimes(1);
+    expect(valueComparison).toBeCalledTimes(1);
+
+    rerender();
+    expect(referenceComparison).toBeCalledTimes(2);
+    expect(valueComparison).toBeCalledTimes(1);
+
+    rerender();
+    expect(referenceComparison).toBeCalledTimes(3);
+    expect(valueComparison).toBeCalledTimes(1);
+  });
 });
