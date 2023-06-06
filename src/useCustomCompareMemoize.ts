@@ -32,7 +32,7 @@ export function checkDeps<TDependencyList extends DependencyList>(
 export function useCustomCompareMemoize<TDependencyList extends DependencyList>(
   deps: readonly [...TDependencyList],
   depsAreEqual: DepsAreEqual<readonly [...TDependencyList]>,
-) {
+): readonly [...TDependencyList] {
   const ref = useRef<readonly [...TDependencyList] | undefined>(undefined);
   const prevRef = useRef<readonly [...TDependencyList] | undefined>(
     ref.current,
@@ -44,5 +44,5 @@ export function useCustomCompareMemoize<TDependencyList extends DependencyList>(
 
   prevRef.current = deps;
 
-  return ref.current;
+  return ref.current as readonly [...TDependencyList];
 }
