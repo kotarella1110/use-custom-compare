@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [22.x]
         react-version: [^16.8.0, ^17]
     steps:
       - uses: actions/checkout@v3
@@ -19,6 +19,7 @@ jobs:
         run: |
           npm install --D --legacy-peer-deps \
             react@${{ matrix.react-version }} \
+            react-dom@${{ matrix.react-version }} \
             react-test-renderer@${{ matrix.react-version }} \
             @testing-library/react@12 \
             @testing-library/react-hooks
@@ -28,11 +29,12 @@ jobs:
         run: npm test
         env:
           CI: true
-  react-18:
+  react-18-19:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [22.x]
+        react-version: [^18, ^19]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -41,6 +43,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm ci
+      - name: Install React ${{ matrix.react-version }}
+        run: |
+          npm install --D \
+            react@${{ matrix.react-version }} \
+            react-dom@${{ matrix.react-version }} \
+            react-test-renderer@${{ matrix.react-version }}
       - name: Test
         run: npm test
         env:

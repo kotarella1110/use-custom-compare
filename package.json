@@ -2,17 +2,23 @@
   "name": "use-custom-compare",
   "version": "1.4.0",
   "description": "It's React's useEffect/useMemo/useCallback hooks, except using custom comparison on the inputs, not reference equality",
-  "main": "dist/use-custom-compare.js",
-  "module": "dist/use-custom-compare.esm.js",
-  "unpkg": "dist/use-custom-compare.umd.min.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
   "sideEffects": false,
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && rollup -c",
-    "clean": "rimraf dist",
+    "build": "tsup",
     "lint": "eslint '**/*.{js,ts}'",
     "lint:fix": "npm run lint -- --fix",
     "lint:types": "tsc --noEmit",
@@ -42,13 +48,14 @@
     "@commitlint/config-conventional": "^12.1.1",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^16.2.0",
     "@types/jest": "^26.0.23",
-    "@types/react": "^18.0.20",
+    "@types/react": "^19.0.12",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
     "dequal": "^2.0.2",
+    "esbuild-plugin-umd-wrapper": "^3.0.0",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^7.2.0",
@@ -62,22 +69,22 @@
     "jest": "^26.6.3",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "react": "^18.2.0",
-    "react-test-renderer": "^18.2.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.47.0",
-    "rollup-plugin-filesize": "^9.1.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-sourcemaps": "^0.6.3",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-test-renderer": "^18.3.1",
     "semantic-release": "^17.4.2",
     "ts-jest": "^26.5.6",
+    "tsup": "^8.4.0",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "react": ">=16.8.0 <=18.x",
+    "react": ">=16.8.0 <=19.x",
     "typescript": ">=4.0.2"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   },
   "husky": {
     "hooks": {
