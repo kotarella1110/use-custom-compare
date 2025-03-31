@@ -24,5 +24,6 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+    'import/no-extraneous-dependencies': 'off',
   },
 };
